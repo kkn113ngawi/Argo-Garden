@@ -57,7 +57,26 @@ body {
   font-weight: 900;
   white-space: nowrap; /* Pastikan teks tetap dalam satu baris */
   z-index: 50; /* Pastikan teks di atas gambar latar belakang */
+  opacity: 0;
+  animation: fadeInOut 5s infinite; /* Durasi 3s untuk satu siklus penuh, berulang terus */
+  animation-delay: 0.5s;
 }
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0; /* Mulai dari tidak terlihat */
+  }
+  33% { /* Teks muncul di sepertiga awal durasi */
+    opacity: 1; /* Terlihat penuh */
+  }
+  66% { /* Teks tetap terlihat hingga dua pertiga durasi */
+    opacity: 1; /* Tetap terlihat penuh */
+  }
+  100% {
+    opacity: 0; /* Kembali tidak terlihat di akhir durasi */
+  }
+}
+
 
 .parallax__container h1.title-wrapper span {
   display: inline-block; /* Agar bisa diatur transform-nya di JS */
@@ -146,8 +165,8 @@ body {
 
   background-image: url('assets/logoAM.png');
   background-repeat: no-repeat;
-  background-position: center;
-  background-size: 70%;
+  background-position: center ;
+  background-size: 60%;
 
   background-color: #050505;
   padding: 30px;
@@ -201,7 +220,7 @@ body {
 /* Untuk layar dengan lebar maksimum 1024px (Tablet & Laptop Kecil) */
 @media (max-width: 1024px) {
   .parallax__container h1.title-wrapper span {
-    font-size: 90px;
+    font-size: 80px;
     text-shadow:
     1px 1px 0px #0a0a0a,
     2px 2px 0px #0a0a0a,
@@ -245,7 +264,7 @@ body {
     height: 70vh; /* Sesuaikan tinggi parallax untuk perangkat yang lebih kecil */
   }
   .parallax__container h1.title-wrapper span {
-    font-size: 50px;
+    font-size: 60px;
     text-shadow:
     1px 1px 0px #0a0a0a,
     2px 2px 0px #0a0a0a,
