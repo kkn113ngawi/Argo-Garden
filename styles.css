@@ -90,6 +90,12 @@ body {
   white-space: nowrap;
 }
 
+.social-media-container{
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
 .parallax__container img {
   position: absolute;
   top: 0; /* Pastikan gambar dimulai dari paling atas container */
